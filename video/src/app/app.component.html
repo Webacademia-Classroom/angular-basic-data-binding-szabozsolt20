@@ -1,0 +1,34 @@
+
+<div>
+  <h1>Binding syntax</h1>
+  <hr />
+
+  <div>
+    <h2>Button disabled state bound to isUnchanged property</h2>
+    <!-- Bind button disabled state to `isUnchanged` property -->
+    <button type="button" [disabled]="isUnchanged">Save</button>
+  </div>
+
+  <hr />
+
+  <div (keyup)="0">
+    <h2>DOM properties</h2>
+    <p>1. Use the inspector to see the HTML attribute and DOM property values. Click the buttons to log values to the console.</p>
+
+    <label for="html-attr">The current value is {{ bindingInputValue }}:
+    <input
+      (input)="setBindingInputValue($event)"
+      [value]="bindingInputValue"
+      type="text">
+    </label>
+
+    <div>
+        <button type="button" (click)="getDOMPropertyValue()">Get DOM property value</button> Changeable. Angular works with these.
+    </div>
+
+    <p>2. Change the name in the input and click the buttons again.</p>
+  </div>
+
+  <hr />
+
+</div>
